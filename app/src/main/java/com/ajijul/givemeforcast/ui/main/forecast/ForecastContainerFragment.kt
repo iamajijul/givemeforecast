@@ -100,7 +100,7 @@ class ForecastContainerFragment : BaseFragment() {
 
     private fun observeForecastResult(lat: String, lon: String) {
 
-        forevcastViewModel.observeForecast(lat, lon, Constants.API_KEY)
+        forevcastViewModel.getForecastResult()
             .removeObservers(viewLifecycleOwner)
         forevcastViewModel.observeForecast(lat, lon, Constants.API_KEY)
             .observe(viewLifecycleOwner, Observer {

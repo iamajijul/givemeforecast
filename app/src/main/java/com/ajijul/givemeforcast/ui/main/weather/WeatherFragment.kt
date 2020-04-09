@@ -88,8 +88,8 @@ class WeatherFragment : BaseFragment() {
 
 
 private fun getWeather(p0: String?) {
-    weatherViewModel.observeWeather(p0?:return, Constants.API_KEY).removeObservers(viewLifecycleOwner)
-    weatherViewModel.observeWeather(p0, Constants.API_KEY)
+    weatherViewModel.getWeatherObserver().removeObservers(viewLifecycleOwner)
+    weatherViewModel.observeWeather(p0?:"Dubai", Constants.API_KEY)
         .observe(viewLifecycleOwner, Observer {
 
             if (it != null) {

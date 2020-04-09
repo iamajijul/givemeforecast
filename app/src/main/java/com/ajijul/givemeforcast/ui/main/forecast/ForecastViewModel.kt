@@ -3,7 +3,6 @@ package com.ajijul.givemeforcast.ui.main.forecast
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.get
 import androidx.lifecycle.viewModelScope
 import com.ajijul.givemeforcast.models.forecast.ForecastBaseModel
 import com.ajijul.givemeforcast.models.forecast.ThreeHoursModel
@@ -40,7 +39,7 @@ class ForecastViewModel @Inject constructor(var forecastRepo: ForecastRepoImpl) 
             val result = forecastRepo.getForecastOfMyCurrentLocation(lat, lon, apiKey)
             forecast.postValue(result)
             val newState = if (result == null) ScreenState.ERROR else {
-                startGrouping()
+                startGrouping(result)
                 ScreenState.RENDER
             }
             screenState.postValue(newState)
@@ -50,10 +49,10 @@ class ForecastViewModel @Inject constructor(var forecastRepo: ForecastRepoImpl) 
         return forecast
     }
 
-    private fun startGrouping() {
-        if (forecast.value !is ResultWrapper.Success<ForecastBaseModel>)
+    private fun startGrouping(result: ResultWrapper<ForecastBaseModel>) {
+        if (result !is ResultWrapper.Success<ForecastBaseModel>)
             return
-        (forecast.value as ResultWrapper.Success<ForecastBaseModel>).let {
+        result.let {
             groups.postValue(it.value.list.groupBy { item ->
                 val date = format.parse(item.dt_txt)
                 outFormat.format(date?:return);

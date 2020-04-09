@@ -20,6 +20,10 @@ class WeatherViewModel @Inject constructor(var weatherRepo: WeatherRepoImpl) :
         Log.d(TAG, "Weather ViewModel")
     }
 
+    fun getWeatherObserver(): LiveData<ResultWrapper<WeatherBaseModel>>{
+        return weather
+    }
+
     fun observeWeather(
         cityName: String,
         apiKey: String
