@@ -15,7 +15,7 @@ import com.ajijul.givemeforcast.models.forecast.ForecastBaseModel
 import com.ajijul.givemeforcast.models.forecast.ThreeHoursModel
 import com.ajijul.givemeforcast.utils.base.BaseFragment
 import com.ajijul.givemeforcast.utils.base.ResultWrapper
-import com.ajijul.givemeforcast.viewmodels.ViewModelProviderFactory
+import com.ajijul.givemeforcast.utils.ViewModelProviderFactory
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData

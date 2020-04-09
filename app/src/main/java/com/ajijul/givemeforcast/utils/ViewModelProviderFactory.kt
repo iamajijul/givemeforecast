@@ -1,4 +1,4 @@
-package com.ajijul.givemeforcast.viewmodels
+package com.ajijul.givemeforcast.utils
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

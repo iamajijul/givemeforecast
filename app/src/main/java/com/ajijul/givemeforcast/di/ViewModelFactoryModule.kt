@@ -1,7 +1,7 @@
 package com.ajijul.givemeforcast.di
 
 import androidx.lifecycle.ViewModelProvider
-import com.ajijul.givemeforcast.viewmodels.ViewModelProviderFactory
+import com.ajijul.givemeforcast.utils.ViewModelProviderFactory
 import dagger.Binds
 import dagger.Module
 

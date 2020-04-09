@@ -15,7 +15,7 @@ import com.ajijul.givemeforcast.utils.Helper
 import com.ajijul.givemeforcast.utils.base.BaseFragment
 import com.ajijul.givemeforcast.utils.base.ResultWrapper
 import com.ajijul.givemeforcast.utils.base.ScreenState
-import com.ajijul.givemeforcast.viewmodels.ViewModelProviderFactory
+import com.ajijul.givemeforcast.utils.ViewModelProviderFactory
 import kotlinx.android.synthetic.main.fragment_weather.*
 import javax.inject.Inject
 

@@ -23,7 +23,7 @@ import com.ajijul.givemeforcast.utils.base.BaseFragment
 import com.ajijul.givemeforcast.utils.base.MarshmallowPermissionHelper
 import com.ajijul.givemeforcast.utils.base.ResultWrapper
 import com.ajijul.givemeforcast.utils.base.ScreenState
-import com.ajijul.givemeforcast.viewmodels.ViewModelProviderFactory
+import com.ajijul.givemeforcast.utils.ViewModelProviderFactory
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
