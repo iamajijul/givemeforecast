@@ -36,7 +36,7 @@ Whole project written in kotlin language.
 
 ### Testing!
 
-Becasue of short time I written only one class unit test, "BaseRepository.kt". 
+I written one class unit test, "BaseRepository.kt". 
 
 ***Code Coverage : I already did required to activate code coverage functionality. To get code coverage
 follow below step :
